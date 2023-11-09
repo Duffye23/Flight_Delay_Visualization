@@ -42,45 +42,6 @@ def index():
 
     
     return render_template('index.html', data=data)
-"""
-#Allow us to create
-@app.route('/create', methods=['POST'])
-def create():
-    conn = psycopg2.connect(database="Project3_db",
-                        user="postgres",
-                        password="postgres"
-                        host="localhost", port="5432"
-                        )
-    
-    cur = conn.cursor()
-
-    #Get the data from the form
-    date = request.form['Date']
-    airline = request.form['airline']
-    origin = request.form['origin']
-    destination = request.form['destination']
-    departure_time = request.form['Departure Time']
-    initial_departure_time = request.form['Initial Departure Time']
-    taxi_time = request.form['Taxi Time']
-    departure_delay = request.form['Departure Delay']
-    air_time = request.form['Air Time']
-    distance = request.form['distance']
-    cancelled = request.form['cancelled']
-    tail_number = request.form['Tail Number']
-    icao_type = request.form['ICAO Type']
-    manufacture_year = request.form['Manufacture Year']
-    temperature = request.form['temperature']
-    cloud_cover = request.form['Cloud Cover']
-    active_weather = request.form['Active Weather']
-    flight_year = request.form['Flight Year']
-    flight_month = request.form['Flight Month']
-    flight_day = request.form['Flight Day']
-    flight_id = request.form['id']
-
-    #Update data in table
-    cur.execute(
-        '''UPDATE '''
-    )"""
 
 if __name__ == '__main__':
     app.run(debug=True)
