@@ -1,0 +1,64 @@
+<html> 
+  <head> 
+    <title>January Flight Data</title> 
+  </head> 
+  <body> 
+    <h1>CRUD App</h1> 
+    <table> 
+      <thead> 
+        <tr> 
+          <th>Date</th> 
+          <th>Airline</th> 
+          <th>origin</th> 
+          <th>destination</th>
+          <th>Departure Time</th>
+          <th>Initial Departure Time</th>
+          <th>Taxi Time</th>
+          <th>Departure Delay</th> 
+          <th>Air Time</th>
+          <th>distance</th>
+          <th>cancelled</th>
+          <th>Tail Number</th>
+          <th>ICAO Type</th>
+          <th>Manufacture Year</th>
+          <th>temperature</th>
+          <th>Cloud Cover</th>
+          <th>Active Weather</th>
+          <th>Flight Year</th>
+          <th>Flight Month</th>
+          <th>Flight Day</th>
+          <th>id</th>
+
+        </tr> 
+      </thead> 
+      <tbody> 
+        {% for row in data %} 
+        <tr> 
+          <td>{{ row[0] }}</td> 
+          <td>{{ row[1] }}</td> 
+          <td>{{ row[2] }}</td> 
+          <td>{{ row[3] }}</td>
+          <td>{{ row[4] }}</td>
+          <td>{{ row[5] }}</td>
+          <td>{{ row[6] }}</td>
+          <td>{{ row[7] }}</td>
+          <td>{{ row[8] }}</td>
+          <td>{{ row[9] }}</td>
+          <td>{{ row[10] }}</td>
+          <td>{{ row[11] }}</td>
+          <td>{{ row[12] }}</td>
+          <td>{{ row[13] }}</td>
+          <td>{{ row[14] }}</td>
+          <td>{{ row[15] }}</td>
+          <td>{{ row[16] }}</td>
+          <td>{{ row[17] }}</td>
+          <td>{{ row[18] }}</td>
+          <td>{{ row[19] }}</td>
+          <td>{{ row[20] }}</td>
+          <td>{{ row[21] }}</td>
+        </tr> 
+        {% endfor %} 
+      </tbody> 
+    </table> 
+  </body> 
+</html>
