@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 import psycopg2
+from flask import jsonify
 
 #Connect to the database
 conn = psycopg2.connect(database="Project3_db",
@@ -30,7 +31,7 @@ def index():
     cur = conn.cursor()
 
     #Select all flights from the table
-    cur.execute('''SELECT * FROM flights''')
+    cur.execute('''SELECT * FROM flights LIMIT 50000''')
 
     #Fetch that data we just selected
     data = cur.fetchall()
@@ -39,6 +40,7 @@ def index():
     cur.close()
     conn.close()
 
+    
     return render_template('index.html', data=data)
 """
 #Allow us to create
