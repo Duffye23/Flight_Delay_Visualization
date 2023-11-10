@@ -17,7 +17,7 @@ cur = conn.cursor()
 conn.commit()
 
 #Select all flights from the table
-cur.execute('''SELECT * FROM flights LIMIT 10000''')
+cur.execute('''SELECT * FROM flights LIMIT 1''')
 
 #Fetch that data we just selected
 data = cur.fetchall()
@@ -27,7 +27,7 @@ data.columns = ['airline', 'origin','destination','departure time', 'initial dep
 result = data.to_json(orient="index")
 data = loads(result)
 dumps(data, indent=4) 
-#print(data)
+print(data)
 cur.close()
 conn.close()
 
@@ -36,12 +36,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():      
-    return render_template('index.html')
+    return render_template('index.html', data=data)
 
-@app.route('/process_data', methods=['POST'])
-def retrieve():
-    data = data
-    return jsonify(data=data)
+# @app.route('/process_data', methods=['POST'])
+# def retrieve():
+#     data = data
+#     return jsonify(data=data)
 
 
 if __name__ == '__main__':
