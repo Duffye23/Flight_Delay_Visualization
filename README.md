@@ -22,13 +22,14 @@ With the Flask API up and running we were able to feed it into our HTML and Java
 With the HTML code, it was all about making sure the webpage could hold all our data and visuals. It can be viewed in our repository for more information.
 
 Our Visuals provided us with total time of delays per airport and were displayed via a map of the United States, with airports marked and a circle around each marker that grows depending on the total time delayed.</br>
-![image](https://github.com/Duffye23/Flight_Delay_Visualization/assets/58863493/16be59d2-da32-4011-a7f8-d4a615118b2c)</br>
+![image](https://github.com/Duffye23/Flight_Delay_Visualization/assets/58863493/26e5ea59-60a9-41d5-be41-8aba4f032ffb)</br>
 
 We then used a Bar Chart to break down our delays per airport.
-![image](https://github.com/Duffye23/Flight_Delay_Visualization/assets/58863493/29bb28b7-f3c0-4d3f-80e9-7a73c0de6413)</br>
+![image](https://github.com/Duffye23/Flight_Delay_Visualization/assets/58863493/fb0f1055-a468-4aa0-8833-5927b59bc9fa)</br>
 
 And finally, we decided to see if there was a correlation between Taxi Time out, the factor that we isolated in our first project as the most likely cause for a delay in the regression that we had built. But much like our conclusions, the graph doesn't seem to show much correlation.
-![image](https://github.com/Duffye23/Flight_Delay_Visualization/assets/58863493/3a4badf7-422c-4c65-8c21-5bea3bc57634) </br>
+![image](https://github.com/Duffye23/Flight_Delay_Visualization/assets/58863493/51d3a182-1f44-439b-bcd0-41cf1011fc31)
+ </br>
 
 We set out with the task of visualizing flight delays, and we did just that. It was a fun exercise, but unfortuantely we are no closer to pinning down a cdefinite cause for flight delays.
 
