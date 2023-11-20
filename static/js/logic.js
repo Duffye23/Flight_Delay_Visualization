@@ -6,7 +6,6 @@ function markerSize(departure_delay) {
 // Define arrays to hold city markers.
 let cityMarkers = [];
 
-
 var groups = {}; 
 
 for (var i = 0; i < flight_data.length; i++) {
@@ -16,7 +15,7 @@ for (var i = 0; i < flight_data.length; i++) {
     groups[key] = [groups[key][0] + flight_data[i].departure_delay, flight_data[i].origin]; 
   } else {
     groups[key] = [flight_data[i].departure_delay, flight_data[i].origin]; 
-  }
+  }
 }
 
 // Loop through coordinates and create the airport markers.
@@ -50,7 +49,6 @@ let topo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
 });
 
 
-
 // Create two separate layer groups: one for the city markers and another for the state markers.
 
 let airport = L.layerGroup(cityMarkers);
@@ -73,11 +71,7 @@ let myMap = L.map("map", {
   layers: [street, airport]
 });
 
-// Pass our map layers to our layer control.
 // Add the layer control to the map.
 L.control.layers(baseMaps, overlayMaps, {
   collapsed: false
 }).addTo(myMap);
-
-
-
