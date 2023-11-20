@@ -21,11 +21,12 @@ cur.execute('''SELECT * FROM flights LIMIT 5000''')
 #Fetch that data we just selectedS
 data = cur.fetchall()
 data = pd.DataFrame(data)
+
 data.columns = ['airline', 'origin','destination','taxi_time', 'departure_delay', 'air_time',
                  'distance', 'cancelled','tail_number', 'icao_ type', 'manufacture_year', 
                  'temperature', 'cloud_cover', 'active_weather', 'flight_year','flight_month','flight_day', 'id']
 #print(data)
-#result = data.to_json(orient="index")
+result = data.to_json(orient="records")
 #data = loads(result)
 #dumps(data, indent=4) 
 #print(data)
@@ -35,12 +36,14 @@ conn.close()
 #Create the Flask App name
 app = Flask(__name__)
 
-@app.route('/')
-#def index():      
-#    return render_template('index.html', data=data)
+@app.route('/homepage')
+def homepage():      
+  return render_template('index.html', data=result)
 
+@app.route('/process_data')
 def flight_dict():
     flight_data = []
+    
     for row in data.itertuples(index=False):
         airline, origin, destination, taxi_time, departure_delay, air_time, distance,\
         cancelled, tail_number, icao_type, manufacture_year, temperature, cloud_cover,\

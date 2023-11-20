@@ -1,0 +1,28 @@
+/* Remove the default margin and padding from the body. */
+h3 {
+  font-family: Arial, sans-serif;
+  letter-spacing: 3px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #022f4d;
+  text-decoration: underline;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.map {
+  height: 300px;
+  width: 100%;
+}
+
+.container {
+  
+  width: 100%;
+}
+
+
+
