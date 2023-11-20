@@ -1,9 +1,9 @@
-// A function to determine the marker size based on the population
+// A function to determine the marker size based on the departure delay
 function markerSize(departure_delay) {
-  return Math.sqrt(departure_delay) * 50;
+  return Math.sqrt(departure_delay) * 6000;
 }
 
-// Define arrays to hold the created city and state markers.
+// Define arrays to hold city markers.
 let cityMarkers = [];
 
 
@@ -19,7 +19,7 @@ for (var i = 0; i < flight_data.length; i++) {
   }
 }
 
-// Loop through locations, and create the city and state markers.
+// Loop through coordinates and create the airport markers.
 for (var key in groups) { 
   
   var arr = key.split(",");
@@ -36,7 +36,7 @@ for (var key in groups) {
     fillOpacity: 0.65,
     color: "Blue",
     fillColor: "Blue",
-    radius: markerSize(val[0]*10000)
+    radius: markerSize(val[0])
   }).bindTooltip("<center><font face=\"Calibri\" size=\"4\" color=\"black\">Airport: <b>" + val[1] + "</b></font> <font face=\"Calibri\" size=\"4\" color=\"black\"> <br> Departure Delay: <b>" + val[0] + "</b> minutes</b></font></center>"));
 }
 

@@ -10,7 +10,9 @@ var dataMap1 = (flight_data, function(d) { return [d.origin, d.departure_delay, 
     x: flight_data.map(object => object.origin),
     y: flight_data.map(object => object.departure_delay),
     name: "Airports",
-    type: 'bar'
+    type: 'bar',
+    
+    hovertemplate: '<extra></extra>'
 };
 
 // Apply a title to the layout

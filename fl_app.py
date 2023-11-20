@@ -36,8 +36,8 @@ conn.close()
 #Create the Flask App name
 app = Flask(__name__)
 
-@app.route('/homepage')
-def homepage():      
+@app.route('/')
+def index():      
   return render_template('index.html', data=result)
 
 @app.route('/process_data')
